@@ -18,7 +18,7 @@
 		<link rel="preconnect"
 		      href="https://fonts.googleapis.com">
 		<link rel="preconnect"
-		      href="https://fonts.gstatic.com"
+		      href="https://fonts.gstatic.com♣"
 		      crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=K2D&display=swap"
 		      rel="stylesheet">
@@ -26,8 +26,9 @@
 		      type="text/css"
 		      href="res/css/index.css"/>
 	</head>
-	<body class="bg-dark text-bg-dark">
-		<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+	<body class="bg-dark text-bg-dark"
+	      data-bs-theme="dark">
+		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
 				<a class="navbar-brand"
 				   style="font-family: 'K2D', sans-serif; color: #A83E3E;"
@@ -71,10 +72,23 @@
 				</div>
 			</div>
 		</nav>
-		<div id="content"></div>
+		<div class="container"
+		     id="content"></div>
+		
+		<script type="application/ecmascript"
+		        src="app/services/userApi.js"></script>
+		
+		<script type="application/ecmascript"
+		        src="app/model/userModel.js"></script>
 		
 		<script type="application/ecmascript"
 		        src="app/tools.js"></script>
-		<script>navigate( "index" );</script>
+		<script>
+			if ( !localStorage.getItem( "token" ) ) {
+				navigate( "register" );
+			} else {
+				navigate( "index" );
+			}
+		</script>
 	</body>
 </html>

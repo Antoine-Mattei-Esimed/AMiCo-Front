@@ -1,0 +1,177 @@
+<h1 class="text-center">Création de compte</h1>
+<hr>
+<br>
+<div class="text-center">
+	<form class="form-signin">
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputNom">
+				Nom
+			</span>
+			<input type="text"
+			       class="form-control"
+			       placeholder="Nom"
+			       aria-label="Nom"
+			       aria-describedby="inputNom"
+			       id="inputNom"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputPrenom">
+				Prénom
+			</span>
+			<input type="text"
+			       class="form-control"
+			       placeholder="Prénom"
+			       aria-label="Prénom"
+			       aria-describedby="inputPrenom"
+			       id="inputPrenom"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputDateNaissance">
+				Date de naissance
+			</span>
+			<input type="date"
+			       class="form-control"
+			       aria-label="Date de naissance"
+			       aria-describedby="inputDateNaissance"
+			       id="inputDateNaissance"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputAdresse">
+				Adresse
+			</span>
+			<input type="text"
+			       class="form-control"
+			       placeholder="Adresse"
+			       aria-label="Adresse"
+			       aria-describedby="inputAdresse"
+			       id="inputAdresse"
+			       required>
+			<input type="number"
+			       class="form-control"
+			       placeholder="Code postal"
+			       aria-label="Code postal"
+			       aria-describedby="inputCodePostal"
+			       id="inputCodePostal"
+			       required
+			       style="max-width: 100px">
+			<input type="text"
+			       class="form-control"
+			       placeholder="Ville"
+			       aria-label="Ville"
+			       aria-describedby="inputVille"
+			       id="inputVille"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputMail">
+				Adresse e-mail
+			</span>
+			<input type="email"
+			       class="form-control"
+			       placeholder="Adresse e-mail"
+			       aria-label="Adresse e-mail"
+			       aria-describedby="inputMail"
+			       id="inputMail"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputPhone">
+				Téléphone
+			</span>
+			<input type="tel"
+			       class="form-control"
+			       placeholder="Téléphone"
+			       aria-label="Téléphone"
+			       aria-describedby="inputPhone"
+			       id="inputPhone"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputCAAnnuelMax">
+				CA annuel maximum
+			</span>
+			<input type="number"
+			       class="form-control"
+			       placeholder="CA annuel maximum"
+			       aria-label="CA annuel maximum"
+			       aria-describedby="inputCAAnnuelMax"
+			       id="inputCAAnnuelMax"
+			       required>
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+			      id="spanInputTauxDeCharge">
+				Taux de charge
+			</span>
+			<input type="number"
+			       class="form-control"
+			       placeholder="Taux de charge"
+			       aria-label="Taux de charge"
+			       aria-describedby="inputTauxDeCharge"
+			       id="inputTauxDeCharge"
+			       required>
+			<span class="label-input-group input-group-text">%</span>
+		</div>
+		
+		<div class="input-group">
+			<span class="label-input-group input-group-text"
+			      id="spanInputPassword">
+				Mot de passe
+			</span>
+			<input type="password"
+			       id="pwd"
+			       class="form-control"
+			       placeholder="Mot de passe"
+			       aria-label="Mot de passe"
+			       aria-describedby="inputPassword"
+			       required
+			       onkeyup="registerController.checkStrength($( '#pwd' ), $( '#affichageMessage' ))">
+		</div>
+		<div class="input-group mb-3">
+			<span id="affichageMessage"></span>
+		</div>
+		
+		<div class="input-group">
+			<span class="label-input-group input-group-text"
+			      id="spanInputPasswordConfirmation">
+				Confirmer le mot de passe
+			</span>
+			<input type="password"
+			       id="pwdConfirmation"
+			       class="form-control"
+			       placeholder="Mot de passe"
+			       aria-label="Mot de passe"
+			       aria-describedby="inputPassword"
+			       required
+			       onkeyup="registerController.checkPassword($( '#pwd' ), $( '#pwdConfirmation' ), $( '#affichageMessageConfirmationMDP' ))">
+		</div>
+		<div class="input-group mb-3">
+			<span id="affichageMessageConfirmationMDP"></span>
+		</div>
+		
+		<button class="btn btn-lg btn-black btn-block"
+		        type="button"
+		        id="registerButton"
+		        onclick="registerController.register()"
+		        disabled>
+			Créer son compte
+		</button>
+	</form>
+</div>
