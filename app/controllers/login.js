@@ -16,17 +16,38 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-class UserModel {
+import BaseController from "./basecontroller.js";
+
+class LoginController
+	extends BaseController {
 	constructor() {
-		this.userApi = new UserApi();
-		this.authApi = new AuthApi();
+		super();
+		this.userModel = new UserModel();
 	}
 	
-	register( body ) {
-		return this.userApi.register( JSON.stringify( body ) );
-	}
-	
-	login( body ) {
-		return this.authApi.login( JSON.stringify( body ) );
+	async login() {
+		let email    = $( "#inputMailLogin" ).value;
+		let password = $( "#inputPasswordLogin" ).value;
+		
+		const user = {
+			email,
+			password
+		};
+		
+		const result = await this.userModel.login( user );
+		
+		if ( result.success ) {
+			this.toast( "toast-success",
+						result.success,
+						"Vous êtes bien connectés." );
+			window.sessionStorage.setItem( "token",
+										   result.success );
+		} else {
+			this.toast( "toast-fail",
+						result.success,
+						"Erreur : La connexion a échouée." );
+		}
 	}
 }
+
+export default () => window.loginController = new LoginController()

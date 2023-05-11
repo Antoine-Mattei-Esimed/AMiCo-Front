@@ -1,0 +1,95 @@
+<!--
+  ~ AMiCo - Logiciel de gestion de micro-entreprises.
+  ~ Copyright (c) 2023 - Antoine Mattei
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<h1 class="text-center">Création de compte</h1>
+<hr>
+<br>
+<div class="text-center">
+	<form class="form-signin">
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+				  id="spanInputMail">
+				Adresse e-mail
+			</span>
+			<input aria-describedby="inputMail"
+				   aria-label="Adresse e-mail"
+				   class="form-control"
+				   id="inputMailLogin"
+				   placeholder="Adresse e-mail"
+				   required
+				   type="email">
+		</div>
+		
+		<div class="input-group mb-3">
+			<span class="label-input-group input-group-text"
+				  id="spanInputPassword">
+				Mot de passe
+			</span>
+			<input aria-describedby="inputPassword"
+				   aria-label="Mot de passe"
+				   class="form-control"
+				   id="inputPasswordLogin"
+				   placeholder="Mot de passe"
+				   required
+				   type="password">
+		</div>
+		
+		<button class="btn btn-lg btn-black btn-block"
+				id="registerButton"
+				onclick="loginController.login()"
+				type="button">
+			Connexion
+		</button>
+	</form>
+	
+	<p>Vous n'avez pas de compte ? <u onclick="navigate('register')"
+									  style="cursor: pointer;">Inscrivez-vous.</u></p>
+</div>
+
+
+<div aria-atomic="true"
+	 aria-live="assertive"
+	 class="toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0"
+	 id="toast-success"
+	 role="alert">
+	<div class="d-flex">
+		<div class="toast-body"
+			 id="body-toast-success">
+		</div>
+		<button aria-label="Close"
+				class="btn-close btn-close-white me-2 m-auto"
+				data-bs-dismiss="toast"
+				type="button"></button>
+	</div>
+</div>
+
+<div aria-atomic="true"
+	 aria-live="assertive"
+	 class="toast align-items-center text-white bg-danger border-0 position-fixed top-0 end-0"
+	 id="toast-fail"
+	 role="alert">
+	<div class="d-flex">
+		<div class="toast-body"
+			 id="body-toast-fail">
+		</div>
+		<button aria-label="Close"
+				class="btn-close btn-close-white me-2 m-auto"
+				data-bs-dismiss="toast"
+				type="button"></button>
+	</div>
+</div>

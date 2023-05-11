@@ -16,17 +16,19 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-class UserModel {
+class AuthApi {
 	constructor() {
-		this.userApi = new UserApi();
-		this.authApi = new AuthApi();
-	}
-	
-	register( body ) {
-		return this.userApi.register( JSON.stringify( body ) );
+		this.api   = "http://localhost:3000/auth";
+		this.token = window.sessionStorage.getItem( "token" );
 	}
 	
 	login( body ) {
-		return this.authApi.login( JSON.stringify( body ) );
+		return fetchJSON(
+			this.api,
+			methods.post,
+			"login",
+			this.token,
+			body
+		);
 	}
 }

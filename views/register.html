@@ -1,3 +1,21 @@
+<!--
+  ~ AMiCo - Logiciel de gestion de micro-entreprises.
+  ~ Copyright (c) 2023 - Antoine Mattei
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
 <h1 class="text-center">Création de compte</h1>
 <hr>
 <br>
@@ -5,144 +23,144 @@
 	<form class="form-signin">
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputNom">
+				  id="spanInputNom">
 				Nom
 			</span>
-			<input type="text"
-			       class="form-control"
-			       placeholder="Nom"
-			       aria-label="Nom"
-			       aria-describedby="inputNom"
-			       id="inputNom"
-			       required>
+			<input aria-describedby="inputNom"
+				   aria-label="Nom"
+				   class="form-control"
+				   id="inputNom"
+				   placeholder="Nom"
+				   required
+				   type="text">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputPrenom">
+				  id="spanInputPrenom">
 				Prénom
 			</span>
-			<input type="text"
-			       class="form-control"
-			       placeholder="Prénom"
-			       aria-label="Prénom"
-			       aria-describedby="inputPrenom"
-			       id="inputPrenom"
-			       required>
+			<input aria-describedby="inputPrenom"
+				   aria-label="Prénom"
+				   class="form-control"
+				   id="inputPrenom"
+				   placeholder="Prénom"
+				   required
+				   type="text">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputDateNaissance">
+				  id="spanInputDateNaissance">
 				Date de naissance
 			</span>
-			<input type="date"
-			       class="form-control"
-			       aria-label="Date de naissance"
-			       aria-describedby="inputDateNaissance"
-			       id="inputDateNaissance"
-			       required>
+			<input aria-describedby="inputDateNaissance"
+				   aria-label="Date de naissance"
+				   class="form-control"
+				   id="inputDateNaissance"
+				   required
+				   type="date">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputAdresse">
+				  id="spanInputAdresse">
 				Adresse
 			</span>
-			<input type="text"
-			       class="form-control"
-			       placeholder="Adresse"
-			       aria-label="Adresse"
-			       aria-describedby="inputAdresse"
-			       id="inputAdresse"
-			       required>
-			<input type="number"
-			       class="form-control"
-			       placeholder="Code postal"
-			       aria-label="Code postal"
-			       aria-describedby="inputCodePostal"
-			       id="inputCodePostal"
-			       required
-			       style="max-width: 100px">
-			<input type="text"
-			       class="form-control"
-			       placeholder="Ville"
-			       aria-label="Ville"
-			       aria-describedby="inputVille"
-			       id="inputVille"
-			       required>
+			<input aria-describedby="inputAdresse"
+				   aria-label="Adresse"
+				   class="form-control"
+				   id="inputAdresse"
+				   placeholder="Adresse"
+				   required
+				   type="text">
+			<input aria-describedby="inputCodePostal"
+				   aria-label="Code postal"
+				   class="form-control"
+				   id="inputCodePostal"
+				   placeholder="Code postal"
+				   required
+				   style="max-width: 100px"
+				   type="number">
+			<input aria-describedby="inputVille"
+				   aria-label="Ville"
+				   class="form-control"
+				   id="inputVille"
+				   placeholder="Ville"
+				   required
+				   type="text">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputMail">
+				  id="spanInputMail">
 				Adresse e-mail
 			</span>
-			<input type="email"
-			       class="form-control"
-			       placeholder="Adresse e-mail"
-			       aria-label="Adresse e-mail"
-			       aria-describedby="inputMail"
-			       id="inputMail"
-			       required>
+			<input aria-describedby="inputMail"
+				   aria-label="Adresse e-mail"
+				   class="form-control"
+				   id="inputMail"
+				   placeholder="Adresse e-mail"
+				   required
+				   type="email">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputPhone">
+				  id="spanInputPhone">
 				Téléphone
 			</span>
-			<input type="tel"
-			       class="form-control"
-			       placeholder="Téléphone"
-			       aria-label="Téléphone"
-			       aria-describedby="inputPhone"
-			       id="inputPhone"
-			       required>
+			<input aria-describedby="inputPhone"
+				   aria-label="Téléphone"
+				   class="form-control"
+				   id="inputPhone"
+				   placeholder="Téléphone"
+				   required
+				   type="tel">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputCAAnnuelMax">
+				  id="spanInputCAAnnuelMax">
 				CA annuel maximum
 			</span>
-			<input type="number"
-			       class="form-control"
-			       placeholder="CA annuel maximum"
-			       aria-label="CA annuel maximum"
-			       aria-describedby="inputCAAnnuelMax"
-			       id="inputCAAnnuelMax"
-			       required>
+			<input aria-describedby="inputCAAnnuelMax"
+				   aria-label="CA annuel maximum"
+				   class="form-control"
+				   id="inputCAAnnuelMax"
+				   placeholder="CA annuel maximum"
+				   required
+				   type="number">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="label-input-group input-group-text"
-			      id="spanInputTauxDeCharge">
+				  id="spanInputTauxDeCharge">
 				Taux de charge
 			</span>
-			<input type="number"
-			       class="form-control"
-			       placeholder="Taux de charge"
-			       aria-label="Taux de charge"
-			       aria-describedby="inputTauxDeCharge"
-			       id="inputTauxDeCharge"
-			       required>
+			<input aria-describedby="inputTauxDeCharge"
+				   aria-label="Taux de charge"
+				   class="form-control"
+				   id="inputTauxDeCharge"
+				   placeholder="Taux de charge"
+				   required
+				   type="number">
 			<span class="label-input-group input-group-text">%</span>
 		</div>
 		
 		<div class="input-group">
 			<span class="label-input-group input-group-text"
-			      id="spanInputPassword">
+				  id="spanInputPassword">
 				Mot de passe
 			</span>
-			<input type="password"
-			       id="pwd"
-			       class="form-control"
-			       placeholder="Mot de passe"
-			       aria-label="Mot de passe"
-			       aria-describedby="inputPassword"
-			       required
-			       onkeyup="registerController.checkStrength($( '#pwd' ), $( '#affichageMessage' ))">
+			<input aria-describedby="inputPassword"
+				   aria-label="Mot de passe"
+				   class="form-control"
+				   id="pwd"
+				   onkeyup="registerController.checkStrength($( '#pwd' ), $( '#affichageMessage' ))"
+				   placeholder="Mot de passe"
+				   required
+				   type="password">
 		</div>
 		<div class="input-group mb-3">
 			<span id="affichageMessage"></span>
@@ -150,28 +168,63 @@
 		
 		<div class="input-group">
 			<span class="label-input-group input-group-text"
-			      id="spanInputPasswordConfirmation">
+				  id="spanInputPasswordConfirmation">
 				Confirmer le mot de passe
 			</span>
-			<input type="password"
-			       id="pwdConfirmation"
-			       class="form-control"
-			       placeholder="Mot de passe"
-			       aria-label="Mot de passe"
-			       aria-describedby="inputPassword"
-			       required
-			       onkeyup="registerController.checkPassword($( '#pwd' ), $( '#pwdConfirmation' ), $( '#affichageMessageConfirmationMDP' ))">
+			<input aria-describedby="inputPassword"
+				   aria-label="Mot de passe"
+				   class="form-control"
+				   id="pwdConfirmation"
+				   onkeyup="registerController.checkPassword($( '#pwd' ), $( '#pwdConfirmation' ), $( '#affichageMessageConfirmationMDP' ))"
+				   placeholder="Mot de passe"
+				   required
+				   type="password">
 		</div>
 		<div class="input-group mb-3">
 			<span id="affichageMessageConfirmationMDP"></span>
 		</div>
 		
 		<button class="btn btn-lg btn-black btn-block"
-		        type="button"
-		        id="registerButton"
-		        onclick="registerController.register()"
-		        disabled>
+				disabled
+				id="registerButton"
+				onclick="registerController.register()"
+				type="button">
 			Créer son compte
 		</button>
 	</form>
+	
+	<p>Vous avez déjà un compte ? <u onclick="navigate('login')"
+									 style="cursor: pointer;">Connectez-vous.</u></p>
+</div>
+
+<div aria-atomic="true"
+	 aria-live="assertive"
+	 class="toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0"
+	 id="toast-success"
+	 role="alert">
+	<div class="d-flex">
+		<div class="toast-body"
+			 id="body-toast-success">
+		</div>
+		<button aria-label="Close"
+				class="btn-close btn-close-white me-2 m-auto"
+				data-bs-dismiss="toast"
+				type="button"></button>
+	</div>
+</div>
+
+<div aria-atomic="true"
+	 aria-live="assertive"
+	 class="toast align-items-center text-white bg-danger border-0 position-fixed top-0 end-0"
+	 id="toast-fail"
+	 role="alert">
+	<div class="d-flex">
+		<div class="toast-body"
+			 id="body-toast-fail">
+		</div>
+		<button aria-label="Close"
+				class="btn-close btn-close-white me-2 m-auto"
+				data-bs-dismiss="toast"
+				type="button"></button>
+	</div>
 </div>
