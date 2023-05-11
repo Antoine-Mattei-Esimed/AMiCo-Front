@@ -69,7 +69,7 @@
 				</button>
 				<div class="collapse navbar-collapse"
 					 id="navbarNav">
-					<ul class="navbar-nav">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
 							<a aria-current="page"
 							   class="nav-link"
@@ -87,11 +87,49 @@
 							</a>
 						</li>
 					</ul>
+					<span class="navbar-text"
+						  onclick="disconnect()"
+						  style="cursor: pointer">
+						Déconnexion
+					</span>
 				</div>
 			</div>
 		</nav>
 		<div class="container"
 			 id="content"></div>
+		
+		
+		<div aria-atomic="true"
+			 aria-live="assertive"
+			 class="toast align-items-center text-white bg-success border-0 position-fixed top-0 end-0"
+			 id="toast-success"
+			 role="alert">
+			<div class="d-flex">
+				<div class="toast-body"
+					 id="body-toast-success">
+				</div>
+				<button aria-label="Close"
+						class="btn-close btn-close-white me-2 m-auto"
+						data-bs-dismiss="toast"
+						type="button"></button>
+			</div>
+		</div>
+		
+		<div aria-atomic="true"
+			 aria-live="assertive"
+			 class="toast align-items-center text-white bg-danger border-0 position-fixed top-0 end-0"
+			 id="toast-fail"
+			 role="alert">
+			<div class="d-flex">
+				<div class="toast-body"
+					 id="body-toast-fail">
+				</div>
+				<button aria-label="Close"
+						class="btn-close btn-close-white me-2 m-auto"
+						data-bs-dismiss="toast"
+						type="button"></button>
+			</div>
+		</div>
 		
 		<script src="app/services/userApi.js"
 				type="application/ecmascript"></script>
@@ -104,6 +142,11 @@
 		<script src="app/tools.js"
 				type="application/ecmascript"></script>
 		<script>
+			function disconnect() {
+				navigate( "login" );
+				window.sessionStorage.removeItem( "token" );
+			}
+			
 			if ( !localStorage.getItem( "token" ) ) {
 				navigate( "register" );
 			} else {

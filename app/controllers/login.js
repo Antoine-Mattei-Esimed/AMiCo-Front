@@ -42,6 +42,7 @@ class LoginController
 						"Vous êtes bien connectés." );
 			window.sessionStorage.setItem( "token",
 										   result.success );
+			navigate( "index" );
 		} else {
 			this.toast( "toast-fail",
 						result.success,
