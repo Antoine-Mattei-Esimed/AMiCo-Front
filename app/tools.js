@@ -1,3 +1,21 @@
+/*
+ * AMiCo - Logiciel de gestion de micro-entreprises.
+ * Copyright (c) 2023 - Antoine Mattei
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 function $(
 	selector,
 	f
@@ -6,7 +24,7 @@ function $(
 		return document.querySelector( selector );
 	} else {
 		document.querySelectorAll( selector )
-		        .forEach( f );
+				.forEach( f );
 	}
 }
 
@@ -38,7 +56,7 @@ function fetchJSON(
 	body
 ) {
 	window.document.body.style.cursor = "wait";
-	const headers = new Headers();
+	const headers                     = new Headers();
 	if ( token !== undefined ) {
 		headers.append(
 			"Authorization",
@@ -47,9 +65,9 @@ function fetchJSON(
 	}
 	if ( method === "GET" ) {
 		return new Promise( (
-			                    resolve,
-			                    reject
-		                    ) => {
+								resolve,
+								reject
+							) => {
 			fetch(
 				`${ api }/${ url }`,
 				{
@@ -62,7 +80,7 @@ function fetchJSON(
 					if ( r.status < 200 || r.status > 299 ) {
 						const error = await r.json();
 						console.error( error );
-						reject( error );
+						resolve( error );
 					} else {
 						resolve( r.json() );
 					}
@@ -79,9 +97,9 @@ function fetchJSON(
 			`application/json`
 		);
 		return new Promise( (
-			                    resolve,
-			                    reject
-		                    ) => {
+								resolve,
+								reject
+							) => {
 			fetch(
 				`${ api }/${ url }`,
 				{
@@ -96,7 +114,7 @@ function fetchJSON(
 					if ( r.status < 200 || r.status > 299 ) {
 						const error = await r.json();
 						console.error( error );
-						reject( error );
+						resolve( error );
 					} else {
 						resolve( r.json() );
 					}
@@ -120,7 +138,7 @@ function include(
 	urlcontroller
 ) {
 	fetch( url,
-	       { cache : "no-cache" } )
+		   { cache : "no-cache" } )
 		.then( res => res.text() )
 		.then( html => {
 			$( `#${ selector }` ).innerHTML = html;
@@ -130,7 +148,7 @@ function include(
 		} )
 		.catch( function ( err ) {
 			console.log( "Failed to fetch page: ",
-			             err );
+						 err );
 		} );
 }
 
@@ -140,8 +158,8 @@ function include(
  */
 function navigate( view ) {
 	include( "content",
-	         `views/${ view }.html`,
-	         `./controllers/${ view }.js` );
+			 `views/${ view }.html`,
+			 `./controllers/${ view }.js` );
 }
 
 /**
@@ -169,5 +187,5 @@ function getParameterByName( name ) {
 	let match = RegExp( "[?&]" + name + "=([^&]*)" )
 		.exec( window.location.search );
 	return match && decodeURIComponent( match[ 1 ].replace( /\+/g,
-	                                                        " " ) );
+															" " ) );
 }
