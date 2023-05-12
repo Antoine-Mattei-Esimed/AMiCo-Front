@@ -44,9 +44,16 @@ class LoginController
 										   result.success );
 			navigate( "index" );
 		} else {
-			this.toast( "toast-fail",
-						result.success,
-						"Erreur : La connexion a échouée." );
+			if ( result.fail === "Unauthorized" ) {
+				console.log( "Erreur 49" );
+				this.toast( "toast-fail",
+							result.success,
+							"Erreur : Utilisateur ou mot de passe incorrect." );
+			} else {
+				this.toast( "toast-fail",
+							result.fail,
+							`Erreur : ${ result.fail }` );
+			}
 		}
 	}
 }
