@@ -110,7 +110,7 @@ class RegisterController
 		} else {
 			this.toast( "toast-fail",
 						result.success,
-						"Erreur : Votre compte n'a pas pu être créé." );
+						`Erreur : Votre compte n'a pas pu être créé : ${ result.fail }` );
 		}
 	}
 }
