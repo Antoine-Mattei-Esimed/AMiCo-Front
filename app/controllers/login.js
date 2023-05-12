@@ -45,7 +45,6 @@ class LoginController
 			navigate( "index" );
 		} else {
 			if ( result.fail === "Unauthorized" ) {
-				console.log( "Erreur 49" );
 				this.toast( "toast-fail",
 							result.success,
 							"Erreur : Utilisateur ou mot de passe incorrect." );
